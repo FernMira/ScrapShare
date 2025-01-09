@@ -5,6 +5,7 @@ void main() {
   runApp(const ScrapShareApp());
 }
 
+
 class ScrapShareApp extends StatelessWidget {
   const ScrapShareApp({super.key});
 
@@ -20,3 +21,4 @@ class ScrapShareApp extends StatelessWidget {
     );
   }
 }
+

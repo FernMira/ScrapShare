@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'recipe_developer.dart';
-import 'recipe_finder_page.dart'; // Import the Recipe Finder Page
+import 'recipe_developer.dart'; // For "Create a Recipe"
+import 'find_recipe_page.dart'; // For "Find a Recipe"
 
 class RecipesPage extends StatelessWidget {
   const RecipesPage({super.key});
@@ -9,13 +9,12 @@ class RecipesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Recipes'),
-        backgroundColor: const Color(0xFFB6D7A8), // Pastel green
+        title: const Text("Recipes"),
+        backgroundColor: const Color(0xFFB6D7A8),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
+      body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
               'Welcome to the Recipes Section',
@@ -37,8 +36,11 @@ class RecipesPage extends StatelessWidget {
                   ),
                 );
               },
-              style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFFB6D7A8)),
-              child: const Text('Create a Recipe'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFB6D7A8),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              ),
+              child: const Text("Create a Recipe"),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
@@ -47,12 +49,15 @@ class RecipesPage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const RecipeFinderPage(),
+                    builder: (context) => const FindRecipePage(),
                   ),
                 );
               },
-              style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFFB6D7A8)),
-              child: const Text('Find a Recipe'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFB6D7A8),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              ),
+              child: const Text("Find a Recipe"),
             ),
           ],
         ),
